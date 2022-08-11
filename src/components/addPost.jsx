@@ -3,10 +3,10 @@ import { Timestamp, collection, addDoc } from 'firebase/firestore'
 import {ref, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
 import { storage, db } from '../firebaseConfig';
 import { toast } from "react-toastify";
-
-
+import '../css/Addpost.css'
 
 export default function AddPost() {
+  const style1 ={position: 'fixed'};
   const[dataFrm, setDataFrm] = useState({
     title: "",
     descrip: "",
@@ -75,20 +75,21 @@ export default function AddPost() {
   };
 
 return ( 
-    
-  <div className='border p-3 mt-3 bg-light' style={{position: 'fixed'}}>
-    <h2>Create Post</h2>
-    <label htmlFor='Title'>Title</label>
-    <input type="text" name="title" className='form-control' value={dataFrm.title} onChange={(e)=>handleChange(e)}/>
+
+  <div className="containerAd"> 
+    <div className='border p-3 mt-3  mb-6 bg-light' style={style1}>
+      <h2>Create Post</h2>
+          <label htmlFor='Title'>Title</label>
+              <input type="text" name="title" className='form-control' value={dataFrm.title} onChange={(e)=>handleChange(e)}/>
 
     {/* descip */}
     
-    <label htmlFor="Description">Description</label>
-    <textarea name="descrip" className='form-control' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
+          <label htmlFor="Description">Description</label>
+              <textarea name="descrip" className='form-control' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
 
     {/* img */}
 
-    <label htmlFor="Image"></label>
+          <label htmlFor="Image"></label>
     <input type="file" name="image" accept="image/*" className="form-control"  onChange={(e)=>handleImageChange(e)}/>
     
     {progress=== 0 ? null : (
@@ -101,7 +102,8 @@ return (
     )}
     
     <button className='form-control  btn btn-outline-info mt-2' onClick={handlePost}>Posting</button>
-  </div>
+    </div>
+</div>   
 )
 }
 
