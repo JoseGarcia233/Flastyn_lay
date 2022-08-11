@@ -75,22 +75,27 @@ export default function AddPost() {
   };
 
 return ( 
+  
 
   <div className="containerAd"> 
-    <div className='border p-3 mt-3  mb-6 bg-light' style={style1}>
-      <h2>Create Post</h2>
-          <label htmlFor='Title'>Title</label>
+    <div className='border p-5 mt-3  mb-6 bg-light' style={style1}>
+      <div className='containerh2'>
+        <h2>Create Post</h2>
+      </div>
+          <div className='containerlab1'>
+            <label htmlFor='Title' className='title'>Title</label>
               <input type="text" name="title" className='form-control' value={dataFrm.title} onChange={(e)=>handleChange(e)}/>
-
-    {/* descip */}
-    
-          <label htmlFor="Description">Description</label>
-              <textarea name="descrip" className='form-control' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
-
+          </div>
+            {/* descip */}
+            <div className='containerlab1'>
+              <label htmlFor="Description">Description</label>
+                <textarea name="descrip" className='form-control' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
+                  <label htmlFor="Image">Image</label>
+                    <input type="file" name="image" accept="image/*" className="form-control"  onChange={(e)=>handleImageChange(e)}/>
+            </div>
     {/* img */}
 
-          <label htmlFor="Image"></label>
-    <input type="file" name="image" accept="image/*" className="form-control"  onChange={(e)=>handleImageChange(e)}/>
+         
     
     {progress=== 0 ? null : (
         <div className="progress">

@@ -2,7 +2,7 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react'
 import { db } from '../firebaseConfig';
 import RemoveP from './RemoveP';
-import '../css/PostP.css';
+
 
 
 export default function Post() {

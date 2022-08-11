@@ -1,6 +1,23 @@
 .containerAd {
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  left: 470px;
+  top: 135px;
+  
+}
 
+.containerh2 {
+  text-align: center;
+  color:#850d19;
+  padding:2px ;
+}
 
+.containerlab1{
+  text-align: center;
+  color:#850d19;
+  font-size: medium;
+  margin: 2px;
+}
+
+input[type="text"] {
+  width: 300px;
 }
