@@ -18,10 +18,19 @@ button[type=button]{
   text-align:center;
   text-decoration: none;
   font-size:x-large;
-  margin: 4px;
+  margin: 29px;
+  color:#850d19;
 }
 
 h3 {
+  color:#850d19;
+}
+
+h5 {
+  color:#850d19;
+}
+
+h4 {
   color:#850d19;
 }
 
@@ -30,5 +39,29 @@ Link {
   text-decoration: none;
 }
 
+.containerbadd1 {
+  position: fixed;
+  left: 1100px;
+  
+  
+}
 
+.containerbadd2 {
+  position: fixed;
+  left: 1096px;
+  top: 150px;
+  
+}
+
+.containertitle {
+  position: fixed;
+  left: 1079px;
+  top: 119px;
+}
+
+.containertitleadp {
+  position: fixed;
+  left: 1028px;
+  
+}
 

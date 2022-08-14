@@ -1,12 +1,17 @@
 import React, {useState}from 'react'
 import { Timestamp, collection, addDoc } from 'firebase/firestore'
 import {ref, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
-import { storage, db } from '../firebaseConfig';
+import { storage, db, auth } from '../firebaseConfig';
 import { toast } from "react-toastify";
+import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import '../css/Addpost.css'
 
 export default function AddPost() {
-  const style1 ={position: 'fixed'};
+  const style1 ={position: 'fixed', };
+  let nav = useNavigate();
+  const [user] = useAuthState(auth);
+
   const[dataFrm, setDataFrm] = useState({
     title: "",
     descrip: "",
@@ -34,7 +39,7 @@ export default function AddPost() {
     const storageRef = ref(storage, `/images/${Date.now()}${dataFrm.imageUrl.name}`);
 
     const uploadImage =uploadBytesResumable(storageRef, dataFrm.imageUrl);
-
+      
     uploadImage.on("state_changed", (snapshot) => {
       const progressPercent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100
       );
@@ -57,11 +62,14 @@ export default function AddPost() {
             descrip: dataFrm.descrip,
             imageUrl: url,
             dateC: Timestamp.now().toDate(),
+            postCreator: user.displayName,
+            like:[],
+            idUser: user.uid,
           })
           .then(()=>{
             toast("the post have been added correctly", {type:"success"});
             setProgress(0);
-
+            nav('/');
           })
           .catch(err =>{
             toast("An error has occurred adding the post", {type:"error"});
@@ -84,25 +92,23 @@ return (
       </div>
           <div className='containerlab1'>
             <label htmlFor='Title' className='title'>Title</label>
-              <input type="text" name="title" className='form-control' value={dataFrm.title} onChange={(e)=>handleChange(e)}/>
+              <input type="text" name="title" className='form-control' placeholder='Please Write your Title' value={dataFrm.title} onChange={(e)=>handleChange(e)}/>
           </div>
             {/* descip */}
             <div className='containerlab1'>
               <label htmlFor="Description">Description</label>
-                <textarea name="descrip" className='form-control' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
+                  {/* img */}
+                <textarea name="descrip" className='form-control'  placeholder='Please Write your Description' value={dataFrm.descrip} onChange={(e)=>handleChange(e)}/>
                   <label htmlFor="Image">Image</label>
                     <input type="file" name="image" accept="image/*" className="form-control"  onChange={(e)=>handleImageChange(e)}/>
             </div>
-    {/* img */}
 
-         
-    
-    {progress=== 0 ? null : (
-        <div className="progress">
-          <div className="progress-bar progress-bar-striped mt2" style={{width:`${progress}% `}}>
-          {`image is in progress ${progress}%`}
-          </div>
-        </div>
+              {progress=== 0 ? null : (
+                <div className="progress">
+                  <div className="progress-bar progress-bar-striped mt2" style={{width:`${progress}% `}}>
+                    {`image is in progress ${progress}%`}
+                </div>
+                  </div>
     
     )}
     

@@ -1,0 +1,39 @@
+.containerS {
+  position: fixed;
+  left: 470px;
+  top: 130px;
+  box-shadow: 10px 10px 8px 10px #888888;
+  
+}
+.containerH {
+
+  text-align: center;
+  color:#850d19;
+  padding:5px ;
+}
+
+.containerLab {
+  text-align: center;
+  color:#850d19;
+  font-size: medium;
+  padding: 8px;
+  
+}
+
+input[type="text"] {
+  width: 300px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.containerb{
+  text-align: center;
+  font-size:medium;
+}
+
+button[type=submit] {
+  width: 300px;
+  
+}

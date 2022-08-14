@@ -1,0 +1,26 @@
+.containerL {
+  position: fixed;
+  left: 490px;
+  top: 180px;
+  box-shadow: 10px 10px 8px 10px #888888;
+  
+}
+
+.containerLabl {
+
+  text-align: center;
+  color:#850d19;
+  font-size: medium;
+  padding: 8px;
+}
+
+input[type="text"] {
+  width: 300px;
+}
+
+.containerHL {
+  text-align: center;
+  color:#850d19;
+  padding:5px ;
+
+}
