@@ -1,5 +1,5 @@
 
-<h6>This is the final project by Jose Garcia 2019-9056</h6>
+<h4>This is the final project by Jose Garcia 2019-9056</h4>
 
 In the project directory, you can run:
 
