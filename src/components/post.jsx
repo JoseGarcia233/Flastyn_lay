@@ -37,7 +37,7 @@ export default function Post() {
           <div className="container">
             <div className="border mt-3 p-4 bg-light" style={style1}  key={id} >
                 <div className="row mx-md-n5">
-                    <div className="col-3">
+                    <div className="col-xs-12 col-sm-6 col-md-3 ">
                       <img src={imageUrl} alt='title' class="rounded border border-white" style={styleImg} />
                       </div> 
                       <div className="col-8 mt-4 ms-3 ps-5">
