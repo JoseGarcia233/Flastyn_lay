@@ -6,6 +6,7 @@ import BtnAddP from './components/BtnAddP';
 import SingUp from './components/auth/SingUp';
 import Login from './components/auth/Login';
 import './css/PostP.css';
+import ScrollToTop from "react-scroll-to-top";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                   <Route path='/logIn' element ={<Login/>} />
                     <Route path='/' element={
                     <div className='container'>
+                      <ScrollToTop />
                       <div className='row'>
                         <div className='col-md-11'>
                         <Post/>

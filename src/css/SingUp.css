@@ -37,3 +37,17 @@ button[type=submit] {
   width: 300px;
   
 }
+
+@media screen and (max-width:375px){
+  .containerL{
+    width: 100%;
+  }
+
+  .containerH {
+    width: 100%;
+  }
+  
+  .containerLab {
+    width: 100%;
+  }
+}

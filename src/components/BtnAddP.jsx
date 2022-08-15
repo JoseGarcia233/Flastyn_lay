@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {  auth } from '../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
@@ -28,7 +27,7 @@ export default function BtnAddP() {
       {
         !user ?
           <>
-              <h4>If want to add a post please login</h4>
+              <h4>If you want to add a post please login</h4>
                   <div className="containerbadd1">
                     <button  class="btn btn-info "  onClick={handlesingIn}><h5>Login</h5></button>
                       </div>

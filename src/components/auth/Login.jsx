@@ -39,7 +39,7 @@ export default function Login() {
                     </div>
                   <br/>  
                 <div className="containerb">
-              <button type='submit' className='btn btn-outline-info'onClick={handleLog}>Loing</button> 
+              <button type='submit' className='btn btn-outline-info'onClick={handleLog}>Login</button> 
             </div>
           </div>
         </div>

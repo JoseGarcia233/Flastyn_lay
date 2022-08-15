@@ -27,7 +27,7 @@ export default function Post() {
   },[]);
 
   return (
-    <div>
+    <div className='container'>
       {
         post.length === 0 ? (
             <p>we dont found post yet</p>
@@ -59,9 +59,9 @@ export default function Post() {
                           </div>
                         </div>
                         <h3>{title}</h3>
-                    <p>{dateC.toDate().toDateString()}</p>
-                    <h4>{descrip}</h4>
-                    <div className="d-flex flex-row-reverse">
+                          <p>{dateC.toDate().toDateString()}</p>
+                          <h4>{descrip}</h4>
+                        <div className="d-flex flex-row-reverse">
                       {user && <PostLk id={id} like={like}/>}
                     </div>
                 </div>

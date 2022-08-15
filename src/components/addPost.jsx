@@ -112,7 +112,7 @@ return (
     
     )}
     
-    <button className='form-control  btn btn-outline-info mt-2' onClick={handlePost}>Posting</button>
+    <button className='form-control  btn btn-outline-info mt-2' onClick={handlePost}>Send</button>
     </div>
 </div>   
 )

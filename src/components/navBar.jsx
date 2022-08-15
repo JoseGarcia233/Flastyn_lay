@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <nav className="nav">
-      <a href='/#'className="brand">Flastyn</a>
+      <a href='/#'className="brand">Flastyn Lay</a>
         <ul className={active}>
           <li className=" nav__itm">
               <Link  to='/' className=" nav__link" >Home</Link>

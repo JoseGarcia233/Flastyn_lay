@@ -24,3 +24,13 @@ input[type="text"] {
   padding:5px ;
 
 }
+
+
+@media screen and (max-width:800px){
+  .containerL{
+    width: 100%;
+  }
+
+  
+
+}
