@@ -16,11 +16,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ![Second screenshot](./src/components/img/capturePf2.png)
 
-<h5>2-This is the page of create post</h5>
+<h5>3-This is the page of create post</h5>
 
 ![Third screenshot](./src/components/img/capturePf3.png)
 
-<h5>2-This is the page showing the post already added</h5>
+<h5>4-This is the page showing the post already added</h5>
 
 ![Fourth screenshot](./src/components/img/capturePf4.png)
 
